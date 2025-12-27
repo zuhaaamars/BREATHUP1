@@ -1,0 +1,208 @@
+.info-rujukan-section {
+  background-color: #7fc7e3;
+  padding: 60px 80px;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Text + Image Section ===== */
+.info-content,
+.info-subcontent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.info-text {
+  flex: 1;
+}
+
+.info-text h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.info-text p {
+  color: #f3f3f3;
+  line-height: 1.7;
+  font-size: 1rem;
+  max-width: 600px;
+}
+
+.img-mdrtb,
+.img-pasien {
+  width: 350px;
+  max-width: 40%;
+}
+
+/* ===== Grid Rumah Sakit ===== */
+.rujukan-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
+  }
+  
+.rujukan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.rujukan-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rujukan-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.rujukan-card p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin: 10px 0 20px 0;
+    text-align: center;
+}
+
+/* BUTTON RAPI SEJAJAR */
+.alamat-btn {
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #4c7bfd, #1b57e6);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+
+    width: 100%;          /* Biar sejajar semua */
+    max-width: 200px;     /* Supaya ukurannya elegant */
+    margin: 0 auto;       /* Button benar-benar center */
+
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.alamat-btn:hover {
+    background: linear-gradient(135deg, #3c6af1, #164ac4);
+    transform: scale(1.03);
+}
+
+.alamat-btn:active {
+    transform: scale(0.97);
+}
+
+
+
+/* ===== Responsive — Mobile (HP) ===== */
+@media (max-width: 768px) {
+
+  .info-rujukan-section {
+    padding: 40px 20px;   /* lebih sempit agar pas di HP */
+  }
+
+  /* Layout text + gambar */
+  .info-content,
+  .info-subcontent {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 40px;   /* lebih pendek */
+  }
+
+  /* Judul */
+  .info-text h2 {
+    font-size: 1.4rem;   /* lebih kecil */
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  /* Paragraf */
+  .info-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 90%;      /* supaya tidak terlalu melebar */
+    margin: 0 auto;      /* center */
+    color: #f8f8f8;
+  }
+
+  /* Gambar */
+  .img-mdrtb,
+  .img-pasien {
+    width: 85%;
+    max-width: 260px;
+  }
+
+  /* Judul grid RS */
+  .rujukan-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Grid RS */
+  .rujukan-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom agar rapi */
+    gap: 18px;
+  }
+
+  /* Card RS */
+  .rujukan-card {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .rujukan-card img {
+    height: 130px;
+  }
+
+  .rujukan-card p {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* ===== Extra Small - HP kecil (≤ 480px) ===== */
+@media (max-width: 480px) {
+
+  .info-text h2 {
+    font-size: 1.25rem;
+  }
+
+  .info-text p {
+    font-size: 0.85rem;
+    max-width: 95%;
+  }
+
+  .img-mdrtb,
+  .img-pasien {
+    max-width: 220px;
+  }
+
+  .rujukan-grid {
+    grid-template-columns: 1fr 1fr;  /* tetap 2 kolom */
+    gap: 15px;
+  }
+
+  .rujukan-card img {
+    height: 120px;
+  }
+}

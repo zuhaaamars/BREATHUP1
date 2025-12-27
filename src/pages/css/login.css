@@ -1,0 +1,289 @@
+/* ===== Layout Utama ===== */
+.login-container {
+  display: flex;
+  height: 100vh; /* ubah dari 200vh jadi 100vh agar pas di layar */
+  align-items: center;
+  justify-content: center;
+  background-color: #dcecf3;
+  padding: 1rem;
+}
+
+.login-card {
+  width: 950px;
+  height: 580px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+/* ===== Bagian Kiri ===== */
+.login-left {
+  width: 50%;
+  background-color: #aee3f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+}
+
+/* Logo di pojok kiri atas */
+.login-logo {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.logo-text {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-dark {
+  color: #3f4c76;
+  margin-left: 3px;
+}
+
+/* Gambar ilustrasi */
+.login-illustration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  max-width: 380px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* ===== Bagian Kanan ===== */
+.login-right {
+  width: 50%;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
+.welcome-text {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #5CB4D7;
+  margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Input dan Tombol ===== */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  width: 100%;
+  background-color: #e6e6e6;
+  border: none;
+  border-radius: 8px;
+  height: 42px;
+  padding: 0 2.5rem;
+  font-size: 0.95rem;
+}
+
+/* Tombol Login */
+.login-button {
+  background-color: #5CB4D7 !important;
+  color: white !important;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #4aa2c4 !important;
+}
+
+/* Link buat register */
+.create-account {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #333;
+}
+
+.create-link {
+  color: #5CB4D7;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.create-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Input dan Tombol ===== */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Ubah agar label dan input bisa menumpuk */
+  align-items: flex-start; /* Mulai dari kiri */
+  gap: 5px; /* Jarak antara label dan input/select */
+}
+
+/* Styling untuk label 'Masuk Sebagai' */
+.input-wrapper label {
+    font-size: 0.9rem;
+    color: #555; /* Warna teks yang kontras tapi lembut */
+    font-weight: 500;
+    margin-bottom: -5px; /* Tarik sedikit ke atas */
+}
+
+.input-field {
+  width: 100%;
+  background-color: #e6e6e6;
+  border: none;
+  border-radius: 8px;
+    height: 42px;
+  /* PENTING: Untuk input field (email, password), kita butuh padding kiri untuk ikon. */
+  padding: 0 2.5rem; 
+  font-size: 0.95rem;
+}
+
+/* Styling khusus untuk SELECT (Pilihan Peran) */
+/* Tambahkan atau pastikan SELECT menggunakan gaya input-field, tapi tanpa padding kiri yang besar */
+.input-wrapper select.input-field {
+    /* Hapus padding kiri berlebihan karena select tidak memiliki ikon di dalam field */
+    padding: 0 1rem; 
+    /* Tambahkan panah dropdown default */
+    appearance: menulist; 
+    -webkit-appearance: menulist; 
+}
+
+
+/* Ikon di dalam input (Email & Password) */
+.input-icon, .password-toggle {
+    position: absolute;
+    top: 50%; /* Awalnya tengah */
+    transform: translateY(-50%); /* Geser ke tengah vertikal */
+    color: #888;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Koreksi posisi Ikon untuk input Email dan Password */
+.input-wrapper:has(input.input-field) .input-icon,
+.input-wrapper:has(input.input-field) .password-toggle {
+    /* Sesuaikan posisi Ikon jika berada di input field (bukan select) */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-icon,
+.password-toggle {
+  right: 1rem;       /* pindahkan semua ikon ke kanan */
+  left: auto;        /* hilangkan posisi kiri */
+}
+
+/* ... sisa styling ... */
+
+/* ===== Responsif ===== */
+@media (max-width: 850px) {
+  .login-card {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+  }
+
+  .login-left,
+  .login-right {
+    width: 100%;
+  }
+
+  .login-left {
+    height: 250px;
+  }
+
+  .login-illustration {
+    position: relative;
+    transform: none;
+    width: 70%;
+  }
+}
+
+/* ===== RESPONSIVE UNTUK MOBILE (REGISTER) ===== */
+@media (max-width: 768px) {
+
+  .login-card {
+    flex-direction: column;
+    height: auto;
+    width: 95%;
+  }
+
+  .login-left {
+    width: 100%;
+    height: 220px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .login-illustration {
+    position: relative;   /* HAPUS absolute agar tidak lari */
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 60%;            /* diperkecil */
+    max-width: 230px;
+    margin: 0 auto;        /* benar-benar center */
+    display: block;
+  }
+
+  .login-right {
+    width: 100%;
+    padding: 1.8rem;
+  }
+}

@@ -1,0 +1,109 @@
+/* ===== LAYOUT UTAMA ===== */
+.hasil-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #6EC1E2; /* warna latar belakang biru */
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* ===== MAIN CONTENT ===== */
+.hasil-container {
+  text-align: center;
+  max-width: 700px;
+  width: 100%;
+}
+
+.hasil-title {
+  color: #1c4c68;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hasil-risk-pill {
+  background: #b8f2e6;
+  color: #1c4c68;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hasil-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hasil-card-title {
+  color: #1c4c68;
+  margin-bottom: 1rem;
+}
+
+.hasil-rec-list {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.hasil-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hasil-btn {
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out; /* Tambahkan transisi di sini */
+}
+
+.hasil-btn.primary,
+.hasil-btn.secondary {
+  background: #e0f7ff;
+  color: #1c4c68;
+}
+
+/* PERUBAHAN BARU: Gaya tombol saat di-hover */
+.hasil-btn.primary:hover,
+.hasil-btn.secondary:hover {
+  background: #1c4c68; /* Warna biru tua */
+  color: white; /* Teks putih agar kontras */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.risk-low {
+  background: #b8f2e6; /* hijau muda */
+  color: #1c4c68;
+}
+
+.risk-high {
+  background: #ffb3b3; /* merah muda */
+  color: #8b0000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .hasil-card {
+    padding: 1.5rem;
+  }
+
+  .hasil-title {
+    font-size: 1.6rem;
+  }
+
+  .hasil-btns {
+    flex-direction: column;
+  }
+
+  .hasil-btn {
+    width: 100%;
+  }
+}

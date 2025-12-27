@@ -1,0 +1,179 @@
+/* ====== Container Utama ====== */
+.chat-container {
+  width: 100%;
+  height: 100vh; /* gunakan 100vh agar full layar */
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f9fb;
+  margin: 0; /* hilangkan margin atas bawah */
+  padding: 0;
+}
+
+/* ====== Header ====== */
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 20px;
+  background-color: #0094ff;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ffffff;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chat-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ====== Isi Chat ====== */
+.chat-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f0f4f8;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar custom */
+.chat-body::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 148, 255, 0.5);
+  border-radius: 4px;
+}
+.chat-body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* ====== Chat Bubble ====== */
+.chat-message {
+  padding: 12px 18px;
+  border-radius: 20px;
+  font-size: 1rem;
+  max-width: 70%;
+  word-wrap: break-word;
+  position: relative;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  animation: fadeIn 0.15s ease;
+}
+
+/* Chat dari tenaga medis (kiri) */
+.chat-message.left {
+  align-self: flex-start;
+  background-color: #ffffff;
+  color: #333333;
+  border-top-left-radius: 5px;
+}
+
+/* Chat dari pengguna (kanan) */
+.chat-message.right {
+  align-self: flex-end;
+  background-color: #0094ff;
+  color: #ffffff;
+  border-top-right-radius: 5px;
+}
+
+/* Animasi masuk chat */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== Input Chat ====== */
+.chat-input {
+  position: fixed;
+  bottom: 20px; /* jarak dari bawah biar mengambang */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 800px;
+
+  display: flex;
+  align-items: center;
+  background-color: #bdb5b5;
+  padding: 12px 16px;
+  gap: 10px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+
+.chat-input input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  color: #333333;
+  padding: 8px;
+}
+
+.chat-input input::placeholder {
+  color: #a74c4c;
+}
+
+.chat-input button {
+  background-color: #0094ff;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.chat-input button:hover {
+  background-color: #0078cc;
+  transform: scale(1.05);
+}
+
+/* ====== Responsif ====== */
+@media (max-width: 768px) {
+  .chat-container {
+    height: calc(100vh - 70px);
+    margin-top: 70px;
+  }
+
+  .chat-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .chat-message {
+    font-size: 0.9rem;
+    max-width: 80%;
+  }
+
+  .chat-input button {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}

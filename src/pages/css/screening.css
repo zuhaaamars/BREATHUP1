@@ -1,0 +1,248 @@
+/* ===== LATAR BELAKANG PENUH ===== */
+html,
+body,
+#root,
+.page {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color:  #6EC1E2; /* 🌊 biru penuh */
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== STYLE UTAMA ===== */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== CONTAINER ===== */
+.tbc-form-container {
+  max-width: 1500px;
+  margin: 40px auto;
+  background-color: transparent; /* biar latar belakang tetap biru */
+  border-radius: 12px;
+  padding: 30px;
+  position: relative;
+}
+
+/* ===== LOGO ===== */
+.login-logo {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #59b7f4;/* putih agar kontras di biru */
+  letter-spacing: 1px;
+}
+
+/* ===== HEADER ===== */
+.form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 30px auto;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  position: relative;
+  width: 100%;
+}
+
+.form-header h2 {
+  color: #1E637E;/* ubah ke putih biar kontras */
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+}
+
+.form-header p {
+  font-size: 1rem;
+  color: #f0f0f0; /* abu muda agar tetap terbaca */
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+/* ===== FORM ===== */
+.tbc-form {
+  background-color: #ffffff; /* form tetap putih */
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input,
+select {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 0.95rem;
+  font-family: "Poppins", sans-serif;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #59b7f4;
+  box-shadow: 0 0 0 2px rgba(89, 183, 244, 0.2);
+}
+
+/* ===== STATUS KESEHATAN ===== */
+h3 {
+  color: #004c6d;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #b3e5fc;
+  padding-bottom: 5px;
+}
+
+.question-group {
+  margin-top: 10px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+
+/* ===== BUTTON ===== */
+.submit-btn {
+  width: 100%;
+  background-color: #59b7f4;
+  color: white;
+  border: none;
+  padding: 14px 0;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #4aa4df;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 650px) {
+  .tbc-form-container {
+    margin: 20px 15px;
+    padding: 20px 15px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .login-logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 15px auto;
+  }
+
+  .logo-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-text {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tbc-form {
+    padding: 15px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo-text {
+    font-size: 1.4rem;
+  }
+
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+/* ===== SEMBUNYIKAN LOGO & TEKS DI HP ===== */
+@media (max-width: 650px) {
+  .login-logo {
+    display: none !important;
+  }
+}

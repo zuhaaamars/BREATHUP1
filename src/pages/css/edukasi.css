@@ -1,0 +1,369 @@
+/* General */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: #6ec1e2b7;  /* ✅ Semua halaman biru */
+  color: #333;
+}
+
+.page-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #6ec1e2b7;  /* ✅ Pastikan semua konten biru */
+}
+
+/* ======================== */
+/* ===== HEADER STYLE ===== */
+/* ======================== */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #6ec1e2b7;
+  padding: 15px 60px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Logo container */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Logo image */
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Login Button */
+.btn-login {
+  background: #fff;
+  color: #6ec1e2;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  background: #6ec1e2;
+  color: #fff;
+}
+
+/* =========================== */
+/* ===== DROPDOWN STYLE ===== */
+/* =========================== */
+
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  min-width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  margin-top: 10px;
+  padding: 10px 0;
+  z-index: 1001;
+}
+
+/* Dropdown items */
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  color: #0077a3;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+.dropdown-content a:hover {
+  background-color: #e7f6fb;
+}
+
+/* Show dropdown when hovered */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Cursor pointer for main link */
+.dropbtn {
+  cursor: pointer;
+}
+
+/* ======================== */
+/* ===== HERO SECTION ===== */
+/* ======================== */
+
+/* ===== Section 1 : Rumah Sehat ===== */
+.edukasirumahsehat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #6ec1e2b7;
+  padding: 50px 50px;
+  color: #fff;
+}
+
+/* Bagian teks */
+.rumahsehat-text {
+  width: 50%;
+}
+
+.rumahsehat-text h1 {
+  font-size: 2.8em;         /* sedikit lebih besar */
+  font-weight: 700;         /* menebalkan huruf */
+  line-height: 1.0;         /* spasi antar baris */
+  font-family: 'Montserrat', monospace;
+  margin-bottom: 10px;
+}
+
+.rumahsehat-text p {
+  font-size: 1.3em;
+  line-height: 1.0;         /* spasi antar baris paragraf */
+  margin-bottom: 25px;
+}
+
+/* Bagian gambar */
+.rumahsehat-image {
+  width: 40%;
+}
+
+.rumahsehat-image img {
+  width: 80%;
+  border-radius: 10px;
+}
+
+/* ===== Section : Panduan Gizi ===== */
+.panduangizi {
+  display: flex;
+  flex-direction: row-reverse; /* ubah urutan: teks di kanan, gambar di kiri */
+  justify-content: space-between;
+  align-items: center;
+  background: #6ec1e2b7;
+  padding: 50px 50px;
+  color: #fff;
+}
+
+/* Bagian teks */
+.panduangizi-text {
+  width: 60%;
+}
+
+.panduangizi-text h1 {
+  font-size: 2.9em;
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: 'Montserrat', monospace;
+  margin-bottom: 10px;
+}
+
+.panduangizi-text p {
+  font-size: 1.3em;
+  line-height: 1.0;
+  margin-bottom: 25px;
+}
+
+/* Bagian gambar */
+.panduangizi-image {
+  width: 40%;
+}
+
+.panduangizi-image img {
+  width: 90%;
+  border-radius: 10px;
+}
+
+/* ======================== */
+/* ===== CARD SECTION ===== */
+/* ======================== */
+.card-edukasi {
+  background: #6ec1e2b7; /* warna sama agar menyatu */
+  padding: 100px 100px;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.edukasi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 50px;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tiap box edukasi */
+.edukasi-box {
+  background: #275162b7;
+  border-radius: 20px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  padding: 50px 30px 100px 30px;
+  text-align: left;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 0;
+}
+
+/* Efek hover — halus dan tidak menutupi card lain */
+.edukasi-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Judul */
+.edukasi-box h3 {
+  color: #fbd231;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+/* Paragraf */
+.edukasi-box p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Gambar di kanan bawah */
+.edukasi-img {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  width: 90px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+/* ======================== */
+/* ===== RESPONSIVE ======= */
+/* ======================== */
+
+/* ===== Tablet (max-width: 992px) ===== */
+@media (max-width: 992px) {
+
+  .edukasirumahsehat,
+  .panduangizi {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .rumahsehat-text,
+  .panduangizi-text {
+    width: 100%;
+  }
+
+  .rumahsehat-image,
+  .panduangizi-image {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .rumahsehat-image img,
+  .panduangizi-image img {
+    width: 100%;
+  }
+
+  .card-edukasi {
+    padding: 50px 20px;
+  }
+
+  .edukasi {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+/* ===== Mobile (max-width: 600px) ===== */
+@media (max-width: 600px) {
+
+  .edukasirumahsehat,
+  .panduangizi {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .rumahsehat-text h1,
+  .panduangizi-text h1 {
+    font-size: 1.9em;
+  }
+
+  .rumahsehat-text p,
+  .panduangizi-text p {
+    font-size: 1.05em;
+    line-height: 1.4;
+  }
+
+  .rumahsehat-image img,
+  .panduangizi-image img {
+    width: 95%;
+  }
+
+  /* Card edukasi */
+  .card-edukasi {
+    padding: 40px 10px;
+  }
+
+  .edukasi {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .edukasi-box {
+    padding: 30px 20px 80px 20px;
+  }
+
+  .edukasi-img {
+    width: 65px;
+  }
+}

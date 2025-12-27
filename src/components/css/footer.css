@@ -1,0 +1,122 @@
+/* Footer Section */
+.footer {
+  background-color: #6ec1e2b7;
+  padding: 50px 100px 20px;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+/* Wrapper untuk memastikan logo ke kiri */
+.footer-logo-wrapper {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Logo kiri atas */
+.footer-logo {
+  width: 60px;
+  display: inline-block;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;       /* <== FIX DI SINI */
+  gap: 40px;
+  text-align: left;
+}
+
+.footer-box {
+  flex: 1;
+  min-width: 220px;      /* ukuran aman untuk 3 kolom */
+  max-width: 300px;
+}
+
+.footer-box h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-box p {
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  font-size: 1.6em;
+  color: #000;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  color: #6ec1e2b7;
+}
+
+hr {
+  margin: 30px auto 15px;
+  border: 0;
+  height: 2px;
+  background-color: #6ec1e2b7;
+  width: 90%;
+}
+
+.footer-copy {
+  font-size: 0.9em;
+  color: #000;
+}
+
+/* ============================
+   📱 RESPONSIVE — FIX SEJAJAR
+   ============================ */
+
+@media (max-width: 768px) {
+
+  /* Geser semua isi footer ke kiri */
+  .footer {
+    padding: 40px 15px 20px;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: left;
+  }
+
+  .footer-box {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Lebih rapat lagi untuk HP kecil */
+  .footer {
+    padding: 30px 10px 20px;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .footer-box h3 {
+    font-size: 0.85em;
+  }
+
+  .footer-box p {
+    font-size: 0.75em;
+  }
+}
